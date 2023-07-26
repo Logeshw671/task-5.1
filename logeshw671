@@ -1,0 +1,24 @@
+# task-5
+For the given JSON iterate over all for loops (for,for in,for of,forEach)
+ans:1. *for (var key in data) {
+   if (data.hasOwnProperty(key)) {
+      console.log(data[key].id);
+   }
+}
+2.A for…in loop iterates over all enumerable properties of an object:
+
+const res = JSON.parse(xhr.responseText);
+
+for (const key in res){
+  if(obj.hasOwnProperty(key)){
+    console.log(`${key} : ${res[key]}`)
+  }
+}
+3. Let’s take a look at using Object.entries. This returns an array of the key/value pairs of the object we pass it:
+
+const res = JSON.parse(xhr.responseText);
+
+Object.entries(res).forEach((entry) => {
+  const [key, value] = entry;
+  console.log(`${key}: ${value}`);
+});
